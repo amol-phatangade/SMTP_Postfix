@@ -1,0 +1,23 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ns1.mymail.in.	admin.mymail.in.	(
+			3		; serial
+			604800     	; Refresh
+			86400     	; Retry
+			2419200     	; Expire
+			604800 )   	; Negative Cache TTL
+;
+; name server -NS records
+			
+	 IN      NS      ns1.mymail.in.
+
+	 
+; name servers - A records
+ns1.mymail.in.          IN      A       192.168.2.11
+
+
+; 192.168.0.0/16 - A records
+host1.mymail.in.        IN      A      192.168.2.12
+host2.mymail.in.        IN      A      192.168.2.15
